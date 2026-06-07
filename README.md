@@ -135,8 +135,4 @@ Beispiel:
 [2026-06-04 18:30:22] PC -> UC: 10 / 0  
 [2026-06-04 18:30:22] UC -> PC: FEHLER: Division durch null
 
-## Autor
 
-Fritsch Lukas
-Matrikelnummer: IU14147385
-Kurs: DLBROEPRS01_D
