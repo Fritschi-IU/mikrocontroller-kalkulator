@@ -91,22 +91,23 @@ Vorgehen:
 Die Mikrocontroller-Anwendung wird mit avr-gcc kompiliert und mit avrdude auf dem Arduino Uno übertragen.
 Beispielhafte PowerShell-Befehle:
 
+```powershell
 $AVRGCC = "$env:LOCALAPPDATA\Arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\bin"
 
 $AVRDUDE = "$env:LOCALAPPDATA\Arduino15\packages\arduino\tools\avrdude\8.0.0-arduino1"
-
+```
 Kompilierung:
-
+```powershell
 & "$AVRGCC\avr-gcc.exe" -mmcu=atmega328p -DF_CPU=16000000UL -Os -o main.elf main.c
-
+```
 HEX-Datei erzeugen:
-
+```powershell
 & "$AVRGCC\avr-objcopy.exe" -O ihex -R .eeprom main.elf main.hex
-
+```
 Upload auf dem Arduino Uno, Beispiel mit COM3:
-
+```powershell
 & "$AVRDUDE\bin\avrdude.exe" -C "$AVRDUDE\etc\avrdude.conf" -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:main.hex:i
-
+```
 Hinweis: Der COM-Port muss bei Bedarf angepasst werden.
 Während des Uploads darf kein serieller Monitor geöffnet sein, da dieser den COM-Port blockieren kann.
 
