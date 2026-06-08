@@ -14,13 +14,13 @@ Antwort: ERGEBNIS: 2448
 
 ## Projektstruktur 
 
-main.c - Mikrocontroller-Anwendung in C für den ATmega328P / Arduino Uno
-main.cpp - PC-Anwendung in C++ für Windows / Visual Studio
+code_microcontroller_c_main.c - Mikrocontroller-Anwendung in C für den ATmega328P / Arduino Uno
+code_pc_cpp_main.cpp - PC-Anwendung in C++ für Windows / Visual Studio
 README.md - Projektbeschreibung und Hinweis zur Ausführung
 
 ## Mikrocontroller-Anwendung
 
-Datei: main.c
+Datei: code_microcontroller_c_main.c
 Die Mikrocontroller-Anwendung ist in C geschrieben und für den ATmega328P des Arduino Uno vorgesehen.
 Funktionen:
 
@@ -35,7 +35,7 @@ Der Code verwendet keine Arduino-Serial-Klasse und keine Arduino-setup()-/loop()
 
 ## PC-Anwendung
 
-Datei: main.cpp
+Datei: code_pc_cpp_main.cpp
 Die PC-Anwendung ist als C++ Konsolenprogramm für Windows und Visual Studio umgesetzt.
 Funktionen:
 
@@ -98,7 +98,7 @@ $AVRDUDE = "$env:LOCALAPPDATA\Arduino15\packages\arduino\tools\avrdude\8.0.0-ard
 ```
 Kompilierung:
 ```powershell
-& "$AVRGCC\avr-gcc.exe" -mmcu=atmega328p -DF_CPU=16000000UL -Os -o main.elf main.c
+& "$AVRGCC\avr-gcc.exe" -mmcu=atmega328p -DF_CPU=16000000UL -Os -o main.elf code_microcontroller_c_main.c
 ```
 HEX-Datei erzeugen:
 ```powershell
