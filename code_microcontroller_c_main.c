@@ -61,9 +61,6 @@ int main(void) {
 
     _delay_ms(500);
 
-    uart_send_string("Arduino-Uno-Kalkulator bereit.\r\n");
-    uart_send_string("Ausdruck senden, z. B. 34 * 72\r\n");
-
     while (1) {
         uart_read_line(inputBuffer, INPUT_BUFFER_SIZE);
 
