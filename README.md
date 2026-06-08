@@ -1,6 +1,6 @@
 # Mikrocontroller-Kalkulator - Aufgabe 2
 
-Diese Repostory enthält die Umsetzung der Aufgabe 2 aus dem Kurs "Programmierung mit C/C++".
+Diese Repository enthält die Umsetzung der Aufgabe 2 aus dem Kurs "Programmierung mit C/C++".
 Thema: Mikrocontroller-Implementierung eines einfachen Kalkulators
 
 # Projektbeschreibung
@@ -81,7 +81,7 @@ Die PC-Anwendung kann in Visual Studio als C++ Konsolenprojekt ausgeführt werde
 Vorgehen:
 
 1. Neues C++ Konsolenprojekt in Visual Studio erstellen
-2. Automatisch erzeugte Quelldatei durch main.cpp ersetzen
+2. Automatisch erzeugte Quelldatei durch code_pc_cpp_main.cpp ersetzen
 3. Projekt mit "Lokaler Windows-Debugger" starten
 4. COM-Port des Arduino Uno eingeben, zum Beispiel COM3
 5. Rechenausdrücke im Konsolenfenster eingeben
